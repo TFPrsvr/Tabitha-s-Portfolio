@@ -9,16 +9,30 @@ const Nav2 = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPos = window.scrollY + 150;
-
-      sections.forEach(section => {
-        const el = document.getElementById(section);
-        if (el && scrollPos >= el.offsetTop && scrollPos < el.offsetTop + el.offsetHeight) {
-          setActiveSection(section);
+      const scrollPos = window.scrollY + 150; // Adjust for nav height
+      
+      // Find which section is currently in view
+      let currentSection = 'home';
+      
+      // Check each section from bottom to top for more accurate detection
+      sections.slice().reverse().forEach(section => {
+        const element = document.getElementById(section);
+        if (element) {
+          const offsetTop = element.offsetTop;
+          
+          // If we've scrolled past the start of this section, it's the current one
+          if (scrollPos >= offsetTop - 200) {
+            currentSection = section;
+          }
         }
       });
+      
+      setActiveSection(currentSection);
     };
 
+    // Initial check
+    handleScroll();
+    
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
