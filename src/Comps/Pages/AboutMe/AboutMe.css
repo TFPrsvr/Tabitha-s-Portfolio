@@ -1,8 +1,8 @@
 .about-me-section {
   background: transparent;
   color: #fff;
-  padding: 4rem 2rem;
-  max-width: 1600px;
+  padding: 4rem 2rem 6rem 2rem;
+  max-width: 1700px;
   margin: 0 auto;
   border-radius: 20px;
   opacity: 0;
@@ -23,7 +23,7 @@
 
 .about-wrapper {
   display: flex;
-  gap: 3rem;
+  gap: 4rem;
   align-items: center;
   justify-content: space-between;
   background: rgba(0, 0, 0, 0.3);
@@ -34,14 +34,14 @@
 }
 
 .about-images {
-  flex: 0 0 400px;
+  flex: 0 0 500px;
   display: flex;
   justify-content: center;
 }
 
 .about-img {
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   height: auto;
   border-radius: 15px;
   object-fit: cover;
