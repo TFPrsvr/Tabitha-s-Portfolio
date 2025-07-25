@@ -3,7 +3,7 @@ import './Projects.css'
 import { Link } from 'react-router-dom'
 import HeaderImg from './projects/NotesApp/HeaderTitleContentNotesApp.png'
 import LoginOutlined from './projects/NotesApp/NotesAppLoginOutlined.png'
-import LoginNImg from './projects/NotesApp/LoginNotesApp.png'
+import LoginNImg from './projects/NotesApp/loginNotesApp.png'
 import Map from './projects/NotesApp/MapNotesApp.png'
 import LROption from './projects/NotesApp/NotesAppLRoption.png'
 import Register from './projects/NotesApp/RegisterNoteApp.png'
@@ -11,7 +11,7 @@ import IdeaSuggest from './projects/Whitneys/IdeasSuggestWhits.png'
 import IdeaTC from './projects/Whitneys/IdeasTitleContentInputsWhits.png'
 import LoginWhit from './projects/Whitneys/LoginWhitney.png'
 import Prev from './projects/Whitneys/PrevProjsWhits.png'
-import Unique from './projects/Whitneys/WHitUniqueCreations.png' 
+import Unique from './projects/Whitneys/WhitUniqueCreations.png' 
 
 const Projects2 = () => {
   // const [appsImgs, setAppsImgs] = useState([
