@@ -94,15 +94,23 @@ const Projects = () => {
             <div className='project-header'>
               <h2 className='project-name'>{project.name}</h2>
               <div className='project-links'>
-                {!project.isPlaceholder && (
+                {!project.isPlaceholder ? (
                   <>
-                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className='live-link'>
-                      Live Demo
-                    </a>
+                    <button 
+                      onClick={() => openLightbox(project.images, 0)} 
+                      className='live-link'
+                      disabled={project.images.length === 0}
+                    >
+                      View Gallery
+                    </button>
                     <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className='github-link'>
                       GitHub
                     </a>
                   </>
+                ) : (
+                  <div className='placeholder-links'>
+                    <span className='coming-soon'>Portfolio images coming soon</span>
+                  </div>
                 )}
               </div>
             </div>
