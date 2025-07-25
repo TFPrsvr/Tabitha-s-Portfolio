@@ -2,20 +2,10 @@
   text-align: center;
   color: #fff;
   background: transparent;
-  /* padding: 2rem 0.5rem; */
-  max-width: 800px;
-  /* margin: 0 auto; */
-  font-family: serif;
-}
-
-section, #resume, .resume-section{
-  margin: none;
-  padding: none;
-}
-
-#resume{
-  background: transparent;
-  max-width: 800px;
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .resume-section h2 {

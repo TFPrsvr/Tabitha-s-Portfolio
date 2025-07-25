@@ -1,6 +1,7 @@
 import React from 'react';
 import './SocialLinks.css';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { SiFreecodecamp } from 'react-icons/si';
 
 const SocialLinks = () => {
   return (
@@ -10,6 +11,9 @@ const SocialLinks = () => {
       </a>
       <a href="https://www.linkedin.com/in/tabitha-fortner-19a077315/" target="_blank" rel="noopener noreferrer">
         <FaLinkedin />
+      </a>
+      <a href="https://www.freecodecamp.org/TFPrsvr" target="_blank" rel="noopener noreferrer">
+        <SiFreecodecamp />
       </a>
     </div>
   );

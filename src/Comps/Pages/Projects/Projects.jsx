@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Projects.css';
 import HeaderImg from './projects/NotesApp/HeaderTitleContentNotesApp.png'
 import LoginOutlined from './projects/NotesApp/NotesAppLoginOutlined.png'
-import LoginNImg from './projects/NotesApp/LoginNotesApp.png'
+import LoginNImg from './projects/NotesApp/loginNotesApp.png'
 import Map from './projects/NotesApp/MapNotesApp.png'
 import LROption from './projects/NotesApp/NotesAppLRoption.png'
 import Register from './projects/NotesApp/RegisterNoteApp.png'
@@ -10,7 +10,7 @@ import IdeaSuggest from './projects/Whitneys/IdeasSuggestWhits.png'
 import IdeaTC from './projects/Whitneys/IdeasTitleContentInputsWhits.png'
 import LoginWhit from './projects/Whitneys/LoginWhitney.png'
 import Prev from './projects/Whitneys/PrevProjsWhits.png'
-import Unique from './projects/Whitneys/WHitUniqueCreations.png' 
+import Unique from './projects/Whitneys/WhitUniqueCreations.png' 
 
 const Projects = () => {
   const [lightbox, setLightbox] = useState({ isOpen: false, imgIndex: 0, images: [] });
@@ -18,22 +18,45 @@ const Projects = () => {
   const projects = [
     {
       name: 'Whitneys Unique Creations',
-      description: 'DIY App to share and explore handmade projects, made with the following TECH: ',
-      tech: 'React, Node.js, Express, MongoDB, HTML, CSS',
-      images: [
-        Unique,
-        IdeaTC, 
-        IdeaSuggest,
-        Prev, 
-        LoginWhit, 
-      ],
-     },
+      description: 'A comprehensive DIY platform for sharing and discovering handmade projects, featuring user authentication, project management, and community interaction.',
+      techStack: {
+        frontend: ['React', 'HTML5', 'CSS3', 'JavaScript'],
+        backend: ['Node.js', 'Express.js'],
+        database: ['MongoDB'],
+        tools: ['Git', 'GitHub', 'VS Code', 'Postman']
+      },
+      images: [Unique, IdeaTC, IdeaSuggest, Prev, LoginWhit],
+      liveUrl: '#',
+      githubUrl: '#'
+    },
     {
       name: 'NotesApp',
-      description: 'Note-taking app with authentication and real-time features, made with the following TECH:',
-      tech: 'React, Node.js, Express, MongoDB, HTML, CSS',
+      description: 'A full-stack note-taking application with user authentication, real-time note management, and secure data storage for personal productivity.',
+      techStack: {
+        frontend: ['React', 'HTML5', 'CSS3', 'JavaScript'],
+        backend: ['Node.js', 'Express.js'],
+        database: ['MongoDB'],
+        tools: ['Git', 'GitHub', 'VS Code', 'Postman']
+      },
       images: [Register, LoginOutlined, LoginNImg, HeaderImg, Map, LROption],
+      liveUrl: '#',
+      githubUrl: '#'
     },
+    // Placeholder for BanyanLabs projects - will be added when you provide images
+    {
+      name: 'BanyanLabs Project 1',
+      description: 'Professional project developed during my time at BanyanLabs. Details and images coming soon.',
+      techStack: {
+        frontend: ['React', 'TypeScript', 'Tailwind CSS'],
+        backend: ['Node.js', 'Express.js'],
+        database: ['PostgreSQL'],
+        tools: ['Git', 'Docker', 'AWS']
+      },
+      images: [],
+      liveUrl: '#',
+      githubUrl: '#',
+      isPlaceholder: true
+    }
   ];
 
   const openLightbox = (images, index) => setLightbox({ isOpen: true, imgIndex: index, images });
@@ -49,32 +72,89 @@ const Projects = () => {
 
   return (
     <section id='projects' className='projects-section'>
-     <strong>
-      <h1>My Projects</h1>
-      </strong> 
-      <br />
-      {projects.map((project, index) => (
-        <div key={index} className='project-card'>
-          <h3>{project.name}</h3>
-          <br />
-          <p>{project.description}</p>
-          <br />
-          <h2 className='tech'>{project.tech}</h2>
-          <br />
-          <br />
-          <br />
-          <div className='project-gallery'>
-            {project.images.map((img, i) => (
-              <img
-                key={i}
-                src={img}
-                alt={`${project.name} screenshot ${i + 1}`}
-                onClick={() => openLightbox(project.images, i)}
-              />
-            ))}
+      <h1 className='section-title'>My Projects</h1>
+      
+      <div className='projects-grid'>
+        {projects.map((project, index) => (
+          <div key={index} className={`project-card ${project.isPlaceholder ? 'placeholder' : ''}`}>
+            <div className='project-header'>
+              <h2 className='project-name'>{project.name}</h2>
+              <div className='project-links'>
+                {!project.isPlaceholder && (
+                  <>
+                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className='live-link'>
+                      Live Demo
+                    </a>
+                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className='github-link'>
+                      GitHub
+                    </a>
+                  </>
+                )}
+              </div>
+            </div>
+            
+            <p className='project-description'>{project.description}</p>
+            
+            <div className='tech-stack'>
+              <div className='tech-category'>
+                <h4>Frontend:</h4>
+                <div className='tech-tags'>
+                  {project.techStack.frontend.map((tech, i) => (
+                    <span key={i} className='tech-tag frontend'>{tech}</span>
+                  ))}
+                </div>
+              </div>
+              
+              <div className='tech-category'>
+                <h4>Backend:</h4>
+                <div className='tech-tags'>
+                  {project.techStack.backend.map((tech, i) => (
+                    <span key={i} className='tech-tag backend'>{tech}</span>
+                  ))}
+                </div>
+              </div>
+              
+              <div className='tech-category'>
+                <h4>Database:</h4>
+                <div className='tech-tags'>
+                  {project.techStack.database.map((tech, i) => (
+                    <span key={i} className='tech-tag database'>{tech}</span>
+                  ))}
+                </div>
+              </div>
+              
+              <div className='tech-category'>
+                <h4>Tools:</h4>
+                <div className='tech-tags'>
+                  {project.techStack.tools.map((tech, i) => (
+                    <span key={i} className='tech-tag tools'>{tech}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+            
+            {!project.isPlaceholder && project.images.length > 0 && (
+              <div className='project-gallery'>
+                {project.images.slice(0, 6).map((img, i) => (
+                  <img
+                    key={i}
+                    src={img}
+                    alt={`${project.name} screenshot ${i + 1}`}
+                    onClick={() => openLightbox(project.images, i)}
+                    className='gallery-image'
+                  />
+                ))}
+                {project.images.length > 6 && (
+                  <div className='more-images' onClick={() => openLightbox(project.images, 6)}>
+                    +{project.images.length - 6} more
+                  </div>
+                )}
+              </div>
+            )}
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
+
       {lightbox.isOpen && (
         <div className='lightbox' onClick={closeLightbox}>
           <span className='close-btn' onClick={closeLightbox}>&times;</span>
