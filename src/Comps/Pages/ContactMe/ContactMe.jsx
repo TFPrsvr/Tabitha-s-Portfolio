@@ -36,7 +36,7 @@ const ContactMe = () => {
 
   return (
     <section id='contact' className='contact-section'>
-      <h2>Contact Me</h2>
+      <h2>Contact Tabitha with your ideas</h2>
       <form ref={formRef} onSubmit={sendEmail} className='contact-form'>
         <input type='text' name='user_name' placeholder='Name' required />
         <input type='email' name='user_email' placeholder='Email' required />

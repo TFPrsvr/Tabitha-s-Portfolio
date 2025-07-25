@@ -5,7 +5,6 @@ import SocialLinks from '../SocialLinks/SocialLinks'
 const Footer = () => {
   return (
     <footer className='footer'>
-      <p>&copy; {new Date().getFullYear()} Tabitha Fortner</p>
       <SocialLinks />
     </footer>
   );
