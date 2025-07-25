@@ -27,10 +27,7 @@ function App() {
         <section id="about"><AboutMe /></section>
         <section id="skills"><Skills2 /></section>
         <section id="projects"><Projects /></section>
-        <div className="bottom-sections">
-          <section id="resume"><Resume /></section>
-          <section id="contact"><ContactMe /></section>
-        </div>
+        <section id="contact"><ContactMe /></section>
       </main>
       <Footer />
     </div>

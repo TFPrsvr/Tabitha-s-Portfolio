@@ -15,6 +15,62 @@
   box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
 }
 
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.resume-actions-footer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.resume-label {
+  color: #ffb3ec;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.resume-icon {
+  color: #00ffe1;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  background: rgba(0, 255, 225, 0.1);
+  border: 1px solid rgba(0, 255, 225, 0.3);
+}
+
+.resume-icon:hover {
+  transform: scale(1.1);
+  background: rgba(0, 255, 225, 0.2);
+  box-shadow: 0 0 15px rgba(0, 255, 225, 0.4);
+}
+
+.view-icon:hover {
+  color: #4CAF50;
+}
+
+.download-icon:hover {
+  color: #ff4f81;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .resume-actions-footer {
+    order: -1;
+  }
+}
+
 .footer p {
   color: #ff6b35;
   text-shadow: 0 0 5px rgba(255, 107, 53, 0.3);
