@@ -36,14 +36,21 @@ const ContactMe = () => {
 
   return (
     <section id='contact' className='contact-section'>
-      <h2>Contact Tabitha with your ideas</h2>
-      <form ref={formRef} onSubmit={sendEmail} className='contact-form'>
-        <input type='text' name='user_name' placeholder='Name' required />
-        <input type='email' name='user_email' placeholder='Email' required />
-        <input type='text' name='subject' placeholder='Subject' />
-        <textarea name='message' placeholder='Message' rows='5' required />
-        <button type='submit'>Send</button>
-      </form>
+      <div className='contact-header'>
+        <h2 className='contact-title'>Contact Tabitha</h2>
+        <p className='contact-subtitle'>with your ideas</p>
+      </div>
+      <div className='contact-info'>
+        <p className='contact-description'>
+          Ready to collaborate or have questions about my work?
+        </p>
+        <p className='contact-instruction'>
+          Click the <strong>Contact</strong> tab in the navigation above to reach out directly.
+        </p>
+        <p className='resume-note'>
+          <small>View and download my resume using the icons in the footer below.</small>
+        </p>
+      </div>
     </section>
   );
 };
