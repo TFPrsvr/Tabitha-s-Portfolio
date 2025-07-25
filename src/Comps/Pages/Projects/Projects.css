@@ -14,11 +14,12 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 3rem;
   max-width: 1400px;
   margin: 0 auto;
 }
+
 
 .project-card {
   background: rgba(0, 0, 0, 0.4);
@@ -73,11 +74,34 @@
 .live-link {
   background: linear-gradient(45deg, #00ffe1, #00bfff);
   color: #000;
+  border: none;
+  cursor: pointer;
 }
 
-.live-link:hover {
+.live-link:hover:not(:disabled) {
   transform: scale(1.05);
   box-shadow: 0 5px 15px rgba(0, 255, 225, 0.4);
+}
+
+.live-link:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.placeholder-links {
+  display: flex;
+  align-items: center;
+}
+
+.coming-soon {
+  color: #ffb3ec;
+  font-style: italic;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 179, 236, 0.1);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 179, 236, 0.3);
 }
 
 .github-link {
@@ -256,6 +280,7 @@
 @media (max-width: 1200px) {
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
+    max-width: 1000px;
   }
 }
 
