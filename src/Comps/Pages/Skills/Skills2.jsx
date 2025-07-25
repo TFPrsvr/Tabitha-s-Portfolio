@@ -5,7 +5,7 @@ import { SiMongodb, SiExpress, SiTailwindcss, SiNextdotjs, SiVite, SiPostman, Si
 
 const skillCategories = {
   frontend: {
-    title: 'Frontend Technologies',
+    title: 'Frontend',
     color: '#ff4f81',
     skills: [
       { name: 'HTML5', level: 90, icon: <FaHtml5 />, color: '#e34c26' },
@@ -17,7 +17,7 @@ const skillCategories = {
     ]
   },
   backend: {
-    title: 'Backend Technologies',
+    title: 'Backend',
     color: '#00ffe1',
     skills: [
       { name: 'Node.js', level: 75, icon: <FaNodeJs />, color: '#339933' },
