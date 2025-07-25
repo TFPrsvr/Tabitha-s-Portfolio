@@ -23,7 +23,7 @@ const Projects = () => {
         frontend: ['React', 'HTML5', 'CSS3', 'JavaScript'],
         backend: ['Node.js', 'Express.js'],
         database: ['MongoDB'],
-        tools: ['Git', 'GitHub', 'VS Code', 'Postman']
+        tools: ['Git', 'GitHub', 'VS Code']
       },
       images: [Unique, IdeaTC, IdeaSuggest, Prev, LoginWhit],
       liveUrl: '#',
@@ -36,21 +36,35 @@ const Projects = () => {
         frontend: ['React', 'HTML5', 'CSS3', 'JavaScript'],
         backend: ['Node.js', 'Express.js'],
         database: ['MongoDB'],
-        tools: ['Git', 'GitHub', 'VS Code', 'Postman']
+        tools: ['Git', 'GitHub', 'VS Code']
       },
       images: [Register, LoginOutlined, LoginNImg, HeaderImg, Map, LROption],
       liveUrl: '#',
       githubUrl: '#'
     },
-    // Placeholder for BanyanLabs projects - will be added when you provide images
+    // BanyanLabs Projects - PassItOn donation platform
     {
-      name: 'BanyanLabs Project 1',
-      description: 'Professional project developed during my time at BanyanLabs. Details and images coming soon.',
+      name: 'PassItOn Donation Widget',
+      description: 'An embeddable donation widget that integrates with Stripe for payment processing. Can be embedded into any website to enable seamless donations with customizable branding and styling.',
       techStack: {
-        frontend: ['React', 'TypeScript', 'Tailwind CSS'],
-        backend: ['Node.js', 'Express.js'],
-        database: ['PostgreSQL'],
-        tools: ['Git', 'Docker', 'AWS']
+        frontend: ['Next.js', 'React', 'TypeScript', 'TailwindCSS'],
+        backend: ['Next.js API Routes'],
+        database: ['Supabase (PostgreSQL)'],
+        tools: ['Git', 'GitHub', 'Docker', 'Stripe', 'Clerk Auth']
+      },
+      images: [],
+      liveUrl: '#',
+      githubUrl: '#',
+      isPlaceholder: true
+    },
+    {
+      name: 'PassItOn Admin Dashboard',
+      description: 'Multi-tenant SaaS dashboard for organizations to create and customize donation widgets. Features editor permissions, SuperAdmin functionality, and comprehensive widget management for multiple websites.',
+      techStack: {
+        frontend: ['Next.js', 'React', 'TypeScript', 'TailwindCSS'],
+        backend: ['Next.js API Routes'],
+        database: ['Supabase (PostgreSQL)'],
+        tools: ['Git', 'GitHub', 'Docker', 'Stripe Connect', 'Clerk Auth']
       },
       images: [],
       liveUrl: '#',
