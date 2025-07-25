@@ -11,6 +11,8 @@ const Name = () => {
           alt='Portfolio Logo'
           className='portfolio-logo'
         />
+        <h1 className='name-title'>Tabitha Fortner</h1>
+        <h2 className='name-subtitle'>Full Stack Developer</h2>
       </div>
     </div>
   );

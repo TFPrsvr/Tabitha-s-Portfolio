@@ -6,23 +6,65 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  /* background-color: #111; */
   overflow: hidden;
-  z-index: 0;
+  z-index: 1;
 }
 
 .intro {
   text-align: center;
-  z-index: 1;
-  margin-top: 25vh;
+  z-index: 2;
+  margin-top: 15vh;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 3rem 4rem;
+  border-radius: 25px;
+  backdrop-filter: blur(15px);
+  border: 2px solid rgba(0, 255, 225, 0.3);
+  box-shadow: 0 0 40px rgba(0, 255, 225, 0.4);
 }
 
 .portfolio-logo {
-  /* max-width: 40vw; */
-  width: 80vw;
+  width: 70vw;
+  max-width: 500px;
   height: auto;
   object-fit: contain;
-  opacity: 0.85;
-  border-radius: 3%;
+  opacity: 0.95;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0, 255, 225, 0.3);
+  margin-bottom: 2rem;
+}
+
+.name-title {
+  font-size: 3.5rem;
+  color: #00ffe1;
+  margin: 1rem 0;
+  text-shadow: 0 0 30px rgba(0, 255, 225, 0.8);
+  font-weight: bold;
+}
+
+.name-subtitle {
+  font-size: 1.8rem;
+  color: #ffb3ec;
+  margin: 0.5rem 0;
+  text-shadow: 0 0 20px rgba(255, 179, 236, 0.6);
+  font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  .intro {
+    padding: 2rem 2.5rem;
+    margin-top: 10vh;
+  }
+  
+  .name-title {
+    font-size: 2.5rem;
+  }
+  
+  .name-subtitle {
+    font-size: 1.4rem;
+  }
+  
+  .portfolio-logo {
+    width: 85vw;
+  }
 }
 
