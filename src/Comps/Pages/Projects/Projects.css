@@ -1,21 +1,21 @@
 .projects-section {
-  padding: 4rem 2rem;
+  padding: var(--space-16) var(--space-8);
   text-align: center;
   min-height: 100vh;
   background: transparent;
 }
 
 .projects-section .section-title {
-  font-size: 3rem;
-  color: #00ffe1;
-  margin-bottom: 3rem;
-  text-shadow: 0 0 20px rgba(0, 255, 225, 0.5);
+  font-size: var(--font-size-5xl);
+  color: var(--color-primary);
+  margin-bottom: var(--space-12);
+  text-shadow: 0 0 20px rgba(0, 184, 169, 0.5);
 }
 
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
+  gap: var(--space-12);
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -23,17 +23,17 @@
 
 .project-card {
   background: rgba(0, 0, 0, 0.4);
-  border-radius: 20px;
-  padding: 2rem;
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
   backdrop-filter: blur(10px);
   border: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
   text-align: left;
 }
 
 .project-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0, 255, 225, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 184, 169, 0.2);
 }
 
 .project-card.placeholder {
@@ -45,30 +45,30 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-4);
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: var(--space-4);
 }
 
 .project-name {
-  color: #ff4f81;
-  font-size: 1.8rem;
+  color: var(--color-accent);
+  font-size: var(--font-size-3xl);
   margin: 0;
   text-shadow: 0 0 10px rgba(255, 79, 129, 0.5);
 }
 
 .project-links {
   display: flex;
-  gap: 1rem;
+  gap: var(--space-4);
 }
 
 .live-link, .github-link {
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-md);
   text-decoration: none;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  font-size: 0.9rem;
+  font-weight: var(--font-weight-bold);
+  transition: all var(--transition-normal);
+  font-size: var(--font-size-sm);
 }
 
 .live-link {
@@ -80,7 +80,7 @@
 
 .live-link:hover:not(:disabled) {
   transform: scale(1.05);
-  box-shadow: 0 5px 15px rgba(0, 255, 225, 0.4);
+  box-shadow: 0 5px 15px rgba(0, 184, 169, 0.4);
 }
 
 .live-link:disabled {
@@ -95,18 +95,18 @@
 }
 
 .coming-soon {
-  color: #ffb3ec;
+  color: var(--color-text-secondary);
   font-style: italic;
-  font-size: 0.9rem;
-  padding: 0.5rem 1rem;
-  background: rgba(255, 179, 236, 0.1);
-  border-radius: 8px;
-  border: 1px solid rgba(255, 179, 236, 0.3);
+  font-size: var(--font-size-sm);
+  padding: var(--space-2) var(--space-4);
+  background: rgba(184, 188, 200, 0.1);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(184, 188, 200, 0.3);
 }
 
 .github-link {
   background: linear-gradient(45deg, #ff4f81, #ff69b4);
-  color: #fff;
+  color: var(--color-text-primary);
 }
 
 .github-link:hover {
@@ -115,39 +115,39 @@
 }
 
 .project-description {
-  color: #ffb3ec;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 2rem;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-normal);
+  margin-bottom: var(--space-8);
 }
 
 .tech-stack {
-  margin-bottom: 2rem;
+  margin-bottom: var(--space-8);
 }
 
 .tech-category {
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--space-6);
 }
 
 .tech-category h4 {
-  color: #00ffe1;
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-  text-shadow: 0 0 5px rgba(0, 255, 225, 0.3);
+  color: var(--color-primary);
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--space-2);
+  text-shadow: 0 0 5px rgba(0, 184, 169, 0.3);
 }
 
 .tech-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: var(--space-2);
 }
 
 .tech-tag {
-  padding: 0.3rem 0.8rem;
-  border-radius: 15px;
-  font-size: 0.9rem;
-  font-weight: bold;
-  transition: transform 0.2s ease;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-xl);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  transition: transform var(--transition-fast);
 }
 
 .tech-tag:hover {
@@ -177,23 +177,23 @@
 .project-gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  margin-top: 1rem;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
 }
 
 .gallery-image {
   width: 100%;
   height: 120px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: var(--radius-lg);
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
   border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 .gallery-image:hover {
   transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 255, 225, 0.3);
+  box-shadow: 0 10px 20px rgba(0, 184, 169, 0.3);
 }
 
 .more-images {
@@ -201,11 +201,11 @@
   align-items: center;
   justify-content: center;
   background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
+  border-radius: var(--radius-lg);
   cursor: pointer;
-  font-weight: bold;
-  color: #00ffe1;
-  transition: all 0.3s ease;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  transition: all var(--transition-normal);
   border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -238,14 +238,14 @@
 .lightbox-img {
   max-width: 90%;
   max-height: 90%;
-  border-radius: 10px;
+  border-radius: var(--radius-lg);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
 }
 
 .arrow, .close-btn {
   position: absolute;
-  color: white;
-  font-size: 2rem;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-4xl);
   cursor: pointer;
   user-select: none;
   background: rgba(0, 0, 0, 0.5);
@@ -255,11 +255,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
+  transition: all var(--transition-normal);
 }
 
 .arrow:hover, .close-btn:hover {
-  background: rgba(0, 255, 225, 0.8);
+  background: rgba(0, 184, 169, 0.8);
   color: #000;
 }
 
@@ -286,16 +286,16 @@
 
 @media (max-width: 768px) {
   .projects-section {
-    padding: 2rem 1rem;
+    padding: var(--space-8) var(--space-4);
   }
   
   .projects-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: var(--space-8);
   }
   
   .project-card {
-    padding: 1.5rem;
+    padding: var(--space-6);
   }
   
   .project-header {
@@ -304,7 +304,7 @@
   }
   
   .project-name {
-    font-size: 1.5rem;
+    font-size: var(--font-size-2xl);
   }
   
   .project-gallery {
@@ -318,7 +318,7 @@
 
 @media (max-width: 480px) {
   .projects-section .section-title {
-    font-size: 2rem;
+    font-size: var(--font-size-4xl);
   }
   
   .project-gallery {
