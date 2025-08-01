@@ -1,10 +1,8 @@
-import React, {useState} from 'react'
+import React from 'react'
 import './Skills.css'
-import {Link} from 'react-router-dom'
 
-import {FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaGitAlt} from 'react-icons/fa'
-import {SiExpress, SiMongodb, SiPostgresql, } from 'react-icons/si'
-import {DiJavascript1} from 'react-icons/di'
+import {FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs} from 'react-icons/fa'
+import {SiExpress, SiMongodb} from 'react-icons/si'
 
 
 const Skills = () => {

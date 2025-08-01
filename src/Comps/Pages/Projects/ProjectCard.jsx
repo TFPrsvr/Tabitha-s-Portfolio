@@ -1,31 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import WhitsCreations from '../../../Comps/Assets/imgsVids/projects/Whitneys/WhitUniqueCreations.png'
-import LoginWhitney from  '../../../Comps/Assets/imgsVids/projects/Whitneys/LoginWhitney.png'
-// import PrevProjs from '../../../Comps/Assets/imgsVids/projects/Whitneys/PrevProjsWhits,png'
-// import IdeaSuggestWhits from '../../../Comps/Assets/imgsVids/projects/Whitneys/IdeaSuggestWhits.png'
-// import TitleContent from '../../../Comps/Assets/imgsVids/projects/Whitneys/IdeasTitleContentInputsWhits.png' 
-import { Link } from 'react-router-dom'
 import './Projects.css'
 
 const ProjectCard = ({ project }) => {
-  const [NotesProject, setNotesProject] = useState({
-    ProjectName: 'NotesApp',
-  })
-  const [whitsCreations, setWhitsCreations] = useState({
-    ProjectName: 'Whitneys Designs'
-  })
-  const [projectImgs, setProjectImgs] = useState({})
-
-  // const Projex = {
-  //  { Projex 1 = setNotesProject('NotesApp')},
-  //  { Projex 2 = setWhitsCreations('NotesApp')},
-  // }
-  
-  useEffect(() => {
-    setProjectImgs({
-      'Whitneys Designs': WhitsCreations
-    })
-  })
   return (
     <div className="card">
       <img src={project.image} alt={project.name} className="card-img" />
@@ -48,7 +24,7 @@ const ProjectCard = ({ project }) => {
 }
 
 const Projects2 = () => {
-  const [projects, setProjects] = useState([
+  const [projects] = useState([
     {
       name: `Project: Whitney's Designs`,
       description: `Whitney's DIY Project- a full-stack application that allows users to create, share, and discover DIY projects. It features user authentication, project creation, and contact forms`,
@@ -74,7 +50,7 @@ const Projects2 = () => {
 
   useEffect(() => {
     console.log('Projects component mounted', projects)
-  }, [])
+  }, [projects])
 
   return (
     <div className="projects-wrapper">

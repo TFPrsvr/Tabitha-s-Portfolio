@@ -15,11 +15,11 @@
   z-index: 2;
   margin-top: 15vh;
   background: rgba(0, 0, 0, 0.7);
-  padding: 3rem 4rem;
+  padding: var(--space-12) var(--space-16);
   border-radius: 25px;
   backdrop-filter: blur(15px);
-  border: 2px solid rgba(0, 255, 225, 0.3);
-  box-shadow: 0 0 40px rgba(0, 255, 225, 0.4);
+  border: 2px solid rgba(0, 184, 169, 0.3);
+  box-shadow: 0 0 40px rgba(0, 184, 169, 0.4);
 }
 
 .portfolio-logo {
@@ -28,39 +28,39 @@
   height: auto;
   object-fit: contain;
   opacity: 0.95;
-  border-radius: 15px;
-  box-shadow: 0 0 30px rgba(0, 255, 225, 0.3);
-  margin-bottom: 2rem;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 0 30px rgba(0, 184, 169, 0.3);
+  margin-bottom: var(--space-8);
 }
 
 .name-title {
-  font-size: 3.5rem;
-  color: #00ffe1;
-  margin: 1rem 0;
-  text-shadow: 0 0 30px rgba(0, 255, 225, 0.8);
+  font-size: var(--font-size-5xl);
+  color: var(--color-primary);
+  margin: var(--space-4) 0;
+  text-shadow: 0 0 30px rgba(0, 184, 169, 0.8);
   font-weight: bold;
 }
 
 .name-subtitle {
-  font-size: 1.8rem;
-  color: #ffb3ec;
-  margin: 0.5rem 0;
-  text-shadow: 0 0 20px rgba(255, 179, 236, 0.6);
-  font-weight: 300;
+  font-size: var(--font-size-3xl);
+  color: var(--color-text-secondary);
+  margin: var(--space-2) 0;
+  text-shadow: 0 0 20px rgba(184, 188, 200, 0.6);
+  font-weight: var(--font-weight-light);
 }
 
 @media (max-width: 768px) {
   .intro {
-    padding: 2rem 2.5rem;
+    padding: var(--space-8) var(--space-10);
     margin-top: 10vh;
   }
   
   .name-title {
-    font-size: 2.5rem;
+    font-size: var(--font-size-4xl);
   }
   
   .name-subtitle {
-    font-size: 1.4rem;
+    font-size: var(--font-size-2xl);
   }
   
   .portfolio-logo {

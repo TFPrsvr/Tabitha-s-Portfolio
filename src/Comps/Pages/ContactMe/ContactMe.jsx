@@ -1,38 +1,8 @@
-import React, { useRef } from 'react';
-// import EmailJs from 'emailjs-com'
+import React from 'react';
 import './ContactMe.css';
 
 const ContactMe = () => {
-  const formRef = useRef();
 
-  const validateEmail = (email) => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-  };
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-    
-    const formData = new FormData(e.target);
-    const email = formData.get('user_email');
-    
-    if (!validateEmail(email)) {
-      alert('Please enter a valid email address.');
-      return;
-    }
-
-    emailjs.sendForm(
-      'your_service_id',
-      'your_template_id',
-      formRef.current,
-      'your_user_id'
-    ).then(
-      () => alert('Message sent!'),
-      () => alert('Send failed.')
-    );
-
-    e.target.reset();
-  };
 
   return (
     <section id='contact' className='contact-section'>

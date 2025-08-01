@@ -1,37 +1,49 @@
 .resume-section {
   text-align: center;
-  color: #fff;
+  color: var(--color-text-primary);
   background: transparent;
-  padding: 1rem;
+  padding: var(--space-4);
   width: 100%;
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
 }
 
 .resume-section h2 {
-  font-size: 2.5rem;
-  color: darkmagenta;
-  /* margin-bottom: 1rem; */
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  margin-bottom: var(--space-4);
 }
 
 .resume-section .resume-actions {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  /* margin-top: 2rem; */
+  gap: var(--space-4);
+  margin-top: var(--space-8);
+  align-items: center;
 }
 
 .resume-section .btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background-color: #00ffe1;
-  color: #000;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4) var(--space-8);
+  background: var(--color-primary);
+  color: var(--color-text-primary);
   text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-base);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-normal);
+  min-width: 200px;
+  border: 1px solid transparent;
 }
 
 .resume-section .btn:hover {
-  background-color: #00a3a3;
+  background: var(--color-accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.resume-section .btn:active {
+  transform: translateY(0);
 }

@@ -14,10 +14,10 @@ const ContactMe = () => {
       formRef.current,
       'your_user_id'
     ).then(
-      (result) => {
+      () => {
         alert('Message sent!');
       },
-      (error) => {
+      () => {
         alert('Send failed. Backend fallback might be needed.');
         // Optionally POST to Express here
       }

@@ -1,7 +1,6 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 import Nav from '../Nav/Nav2'
-import bgVideo from '../Assets/imgsVids/PortfolioPage1.mp4'
 import PortfolioPic from '../Assets/imgsVids/PortFolioLogo.png'
 import './Layout.css'
 
