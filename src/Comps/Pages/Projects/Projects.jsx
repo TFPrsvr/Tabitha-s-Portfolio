@@ -45,12 +45,12 @@ const Projects = () => {
     // BanyanLabs Projects - PassItOn donation platform
     {
       name: 'PassItOn Donation Widget',
-      description: 'An embeddable donation widget that integrates with Stripe for payment processing. Can be embedded into any website to enable seamless donations with customizable branding and styling.',
+      description: 'An embeddable donation widget that integrates with Stripe for seamless payment processing, checkout pages, and success/cancel pages. Uses Stripe webhooks to handle all payment flows and can be embedded into any website.',
       techStack: {
         frontend: ['Next.js', 'React', 'TypeScript', 'TailwindCSS'],
-        backend: ['Next.js API Routes'],
-        database: ['Supabase (PostgreSQL)'],
-        tools: ['Git', 'GitHub', 'Docker', 'Stripe', 'Clerk Auth']
+        backend: ['Next.js API Routes', 'Stripe Webhooks'],
+        database: ['Stripe Payment Processing'],
+        tools: ['Git', 'GitHub', 'Docker', 'Stripe']
       },
       images: [],
       liveUrl: '#',
