@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Projects.css'
-import { Link } from 'react-router-dom'
 import HeaderImg from './projects/NotesApp/HeaderTitleContentNotesApp.png'
 import LoginOutlined from './projects/NotesApp/NotesAppLoginOutlined.png'
 import LoginNImg from './projects/NotesApp/loginNotesApp.png'
@@ -35,14 +34,14 @@ const Projects2 = () => {
   // ])
 
 
-  const [projects, setProjects] = useState([
+  const [projects] = useState([
     {
       id: 'Notes',
       name: 'NotesApp',
       description:  'Note taking app with real-time collaboration. user authentication, and a responsive design.',
       // image: 'https://via.placeholder.com/150',
       images: [HeaderImg, LoginNImg, Map, LoginOutlined, LROption, Register],
-      tech: [React, Node.js, Express, MongoDB, HTML, CSS],
+      tech: ['React', 'Node.js', 'Express', 'MongoDB', 'HTML', 'CSS'],
       Link: '',
     },
     {
@@ -51,14 +50,14 @@ const Projects2 = () => {
       description: `Whitney's DIY Project- a full-stack application that allows users to create, share, and discover DIY projects. It features user authentication, project creation, and contact forms`,
       // image: 'https://via.placeholder.com/150',
       images: [IdeaSuggest, IdeaTC, LoginWhit, Prev, Unique],
-      tech: [React, Node.js, Express, MongoDB, HTML, CSS],
+      tech: ['React', 'Node.js', 'Express', 'MongoDB', 'HTML', 'CSS'],
       Link: '',
     },
   ])
 
   useEffect(() => {
     console.log('Projects component mounted', projects)
-  }, [])
+  }, [projects])
 
   return (
     <div className='Projects'>
