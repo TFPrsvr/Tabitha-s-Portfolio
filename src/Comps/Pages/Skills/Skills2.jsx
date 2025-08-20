@@ -1,7 +1,7 @@
 import React from 'react';
 import './Skills.css';
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGitAlt, FaNpm, FaCode } from 'react-icons/fa';
-import { SiMongodb, SiExpress, SiTailwindcss, SiNextdotjs, SiVite, SiPostman, SiGithub } from 'react-icons/si';
+import { SiMongodb, SiExpress, SiTailwindcss, SiNextdotjs, SiVite, SiGithub } from 'react-icons/si';
 
 const skillCategories = {
   frontend: {
@@ -12,7 +12,7 @@ const skillCategories = {
       { name: 'CSS3', level: 85, icon: <FaCss3Alt />, color: '#1572b6' },
       { name: 'JavaScript', level: 80, icon: <FaJs />, color: '#f7df1e' },
       { name: 'React', level: 75, icon: <FaReact />, color: '#61dafb' },
-      { name: 'Next.js', level: 70, icon: <SiNextdotjs />, color: '#000000' },
+      { name: 'Next.js', level: 70, icon: <SiNextdotjs />, color: '#ffffff' },
       { name: 'Tailwind CSS', level: 80, icon: <SiTailwindcss />, color: '#06b6d4' }
     ]
   },
@@ -21,7 +21,7 @@ const skillCategories = {
     color: '#00ffe1',
     skills: [
       { name: 'Node.js', level: 75, icon: <FaNodeJs />, color: '#339933' },
-      { name: 'Express.js', level: 70, icon: <SiExpress />, color: '#000000' },
+      { name: 'Express.js', level: 70, icon: <SiExpress />, color: '#68cc39' },
       { name: 'MongoDB', level: 75, icon: <SiMongodb />, color: '#47a248' }
     ]
   },
@@ -30,10 +30,9 @@ const skillCategories = {
     color: '#ffa500',
     skills: [
       { name: 'Git', level: 80, icon: <FaGitAlt />, color: '#f05032' },
-      { name: 'GitHub', level: 85, icon: <SiGithub />, color: '#181717' },
+      { name: 'GitHub', level: 85, icon: <SiGithub />, color: '#f0f6fc' },
       { name: 'VS Code', level: 90, icon: <FaCode />, color: '#007acc' },
       { name: 'Vite', level: 75, icon: <SiVite />, color: '#646cff' },
-      { name: 'Postman', level: 70, icon: <SiPostman />, color: '#ff6c37' },
       { name: 'NPM', level: 85, icon: <FaNpm />, color: '#cb3837' }
     ]
   }
@@ -56,7 +55,7 @@ const Skills2 = () => {
               {[...category.skills, ...category.skills].map((skill, index) => (
                 <div key={`${skill.name}-${index}`} className='skill-card'>
                   <div className='skill-header'>
-                    <span className='skill-icon' style={{ color: skill.color }}>
+                    <span className={`skill-icon ${skill.name === 'Next.js' ? 'nextjs-icon' : ''}`} style={{ color: skill.color }}>
                       {skill.icon}
                     </span>
                     <h3>{skill.name}</h3>

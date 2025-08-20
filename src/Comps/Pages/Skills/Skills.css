@@ -102,6 +102,17 @@
   filter: drop-shadow(0 0 10px currentColor);
 }
 
+.nextjs-icon {
+  background: #000000;
+  border-radius: 50%;
+  padding: var(--space-2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+}
+
 .skill-card h3 {
   font-size: var(--font-size-xl);
   color: var(--color-text-primary);
