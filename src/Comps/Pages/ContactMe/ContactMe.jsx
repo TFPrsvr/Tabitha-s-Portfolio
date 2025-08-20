@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './ContactMe.css';
 import { ShimmerButton } from '../../../components/magicui/shimmer-button';
+import { InteractiveHoverButton } from '../../../components/magicui/interactive-hover-button';
 
 const ContactMe = () => {
   const [formData, setFormData] = useState({
@@ -54,13 +55,23 @@ This inquiry was submitted through your portfolio contact form.`;
     <section id='contact' className='contact-section' role="main" aria-labelledby="contact-heading">
       <div className='contact-header'>
         <h1 id="contact-heading" className='contact-title' aria-label="Contact Tabitha">
-          <span className='word-contact'>Contact</span> 
-          <span className='word-tabitha'>Tabitha</span>
+          <InteractiveHoverButton className="contact-word-0 text-white border-white/30 hover:border-white/60">
+            Contact
+          </InteractiveHoverButton>
+          <InteractiveHoverButton className="contact-word-1 text-white border-white/30 hover:border-white/60">
+            Tabitha
+          </InteractiveHoverButton>
         </h1>
         <p className='contact-subtitle' aria-label="With Your Ideas">
-          <span className='word-with'>With</span> 
-          <span className='word-your'>Your</span> 
-          <span className='word-ideas'>Ideas</span>
+          <InteractiveHoverButton className="contact-word-2 text-white border-white/30 hover:border-white/60">
+            With
+          </InteractiveHoverButton>
+          <InteractiveHoverButton className="contact-word-3 text-white border-white/30 hover:border-white/60">
+            Your
+          </InteractiveHoverButton>
+          <InteractiveHoverButton className="contact-word-4 text-white border-white/30 hover:border-white/60">
+            Ideas
+          </InteractiveHoverButton>
         </p>
       </div>
       <div className='contact-content'>

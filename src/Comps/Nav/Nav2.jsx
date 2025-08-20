@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import './Nav.css'
+import './Nav.css';
+import { InteractiveHoverButton } from '../../components/magicui/interactive-hover-button';
 
 const sections = ['about', 'skills', 'projects', 'contact'];
 
@@ -47,14 +48,14 @@ const Nav2 = () => {
       <div className='hamburger-icon' onClick={() => setOpen(true)}>☰</div>
       <div className={`nav-links ${open ? 'open' : ''}`}>
         <div className='close-icon' onClick={() => setOpen(false)}>×</div>
-        {sections.map(sec => (
-          <a
+        {sections.map((sec, index) => (
+          <InteractiveHoverButton
             key={sec}
             onClick={() => handleNavClick(sec)}
-            className={activeSection === sec ? 'active' : ''}
+            className={`nav-word-${index} ${activeSection === sec ? 'active' : ''}`}
           >
             {sec.charAt(0).toUpperCase() + sec.slice(1)}
-          </a>
+          </InteractiveHoverButton>
         ))}
       </div>
     </nav>

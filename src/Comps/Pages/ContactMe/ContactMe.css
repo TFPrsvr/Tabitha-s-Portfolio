@@ -374,3 +374,145 @@
   }
 }
 
+/* Contact Header Word Styling */
+.contact-word-0 { /* Contact */
+  color: #00ffe1;
+  text-shadow: 
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000,
+    0 0 10px rgba(0, 255, 225, 0.8);
+  animation: glow-cyan 2s ease-in-out infinite alternate;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 6px 12px;
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  margin: 0 4px;
+}
+
+.contact-word-0:hover {
+  color: #000000 !important;
+  background: #00ffe1 !important;
+  text-shadow: none !important;
+}
+
+.contact-word-1 { /* Tabitha */
+  color: #ff90c1;
+  text-shadow: 
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000,
+    0 0 10px rgba(255, 144, 193, 0.8);
+  animation: glow-pink 2.2s ease-in-out infinite alternate;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 6px 12px;
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  margin: 0 4px;
+}
+
+.contact-word-1:hover {
+  color: #000000 !important;
+  background: #ff90c1 !important;
+  text-shadow: none !important;
+}
+
+.contact-word-2 { /* With */
+  color: #d69eff;
+  text-shadow: 
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000,
+    0 0 10px rgba(214, 158, 255, 0.8);
+  animation: glow-purple 2.8s ease-in-out infinite alternate;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 6px 12px;
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  margin: 0 4px;
+}
+
+.contact-word-2:hover {
+  color: #000000 !important;
+  background: #d69eff !important;
+  text-shadow: none !important;
+}
+
+.contact-word-3 { /* Your */
+  color: #ffd93d;
+  text-shadow: 
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000,
+    0 0 10px rgba(255, 217, 61, 0.8);
+  animation: glow-yellow 3s ease-in-out infinite alternate;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 6px 12px;
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  margin: 0 4px;
+}
+
+.contact-word-3:hover {
+  color: #000000 !important;
+  background: #ffd93d !important;
+  text-shadow: none !important;
+}
+
+.contact-word-4 { /* Ideas */
+  color: #ff6b6b;
+  text-shadow: 
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000,
+    0 0 10px rgba(255, 107, 107, 0.8);
+  animation: glow-red 2.5s ease-in-out infinite alternate;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 6px 12px;
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  margin: 0 4px;
+}
+
+.contact-word-4:hover {
+  color: #000000 !important;
+  background: #ff6b6b !important;
+  text-shadow: none !important;
+}
+
+/* Glow animations for contact words */
+@keyframes glow-cyan {
+  0% { text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 0 10px rgba(0, 255, 225, 0.8); }
+  100% { text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 0 20px rgba(0, 255, 225, 1), 0 0 30px rgba(0, 255, 225, 0.8); }
+}
+
+@keyframes glow-pink {
+  0% { text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 0 10px rgba(255, 144, 193, 0.8); }
+  100% { text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 0 20px rgba(255, 144, 193, 1), 0 0 30px rgba(255, 144, 193, 0.8); }
+}
+
+@keyframes glow-purple {
+  0% { text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 0 10px rgba(214, 158, 255, 0.8); }
+  100% { text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 0 20px rgba(214, 158, 255, 1), 0 0 30px rgba(214, 158, 255, 0.8); }
+}
+
+@keyframes glow-yellow {
+  0% { text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 0 10px rgba(255, 217, 61, 0.8); }
+  100% { text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 0 20px rgba(255, 217, 61, 1), 0 0 30px rgba(255, 217, 61, 0.8); }
+}
+
+@keyframes glow-red {
+  0% { text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 0 10px rgba(255, 107, 107, 0.8); }
+  100% { text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 0 20px rgba(255, 107, 107, 1), 0 0 30px rgba(255, 107, 107, 0.8); }
+}
+
