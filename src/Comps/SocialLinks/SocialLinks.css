@@ -7,33 +7,33 @@
 .social-links a {
   margin: 0;
   color: var(--text);
-  font-size: 2.2rem;
+  font-size: 2.8rem;
   transition: all 0.3s ease;
-  padding: var(--space-4);
+  padding: var(--space-2);
   border-radius: var(--radius-md);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 52px;
-  height: 52px;
+  width: 58px;
+  height: 58px;
   font-weight: 900;
 }
 
 @media (max-width: 768px) {
   .social-links a {
-    font-size: 2.0rem !important;
-    width: 40px !important;
-    height: 40px !important;
-    padding: 8px !important;
+    font-size: 2.4rem !important;
+    width: 48px !important;
+    height: 48px !important;
+    padding: 4px !important;
   }
 }
 
 @media (max-width: 480px) {
   .social-links a {
-    font-size: 1.8rem !important;
-    width: 35px !important;
-    height: 35px !important;
-    padding: 6px !important;
+    font-size: 2.2rem !important;
+    width: 42px !important;
+    height: 42px !important;
+    padding: 4px !important;
   }
 }
 
