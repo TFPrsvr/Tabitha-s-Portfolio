@@ -1,12 +1,95 @@
+.social-links {
+  display: flex;
+  gap: var(--space-6);
+  align-items: center;
+}
+
 .social-links a {
-  margin: 0 20px;
+  margin: 0;
   color: var(--text);
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   transition: all 0.3s ease;
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  font-weight: 900;
+}
+
+@media (max-width: 768px) {
+  .social-links a {
+    font-size: 2.0rem !important;
+    width: 40px !important;
+    height: 40px !important;
+    padding: 8px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-links a {
+    font-size: 1.8rem !important;
+    width: 35px !important;
+    height: 35px !important;
+    padding: 6px !important;
+  }
 }
 
 .social-links a:hover {
   color: var(--hover);
   transform: scale(1.2);
   text-shadow: 0 0 15px currentColor;
+}
+
+/* Animated social icons */
+.social-icon-animated-0 { /* GitHub */
+  background: linear-gradient(45deg, #ff6b9d, #12c2e9, #ffd93d);
+  background-size: 300% 300%;
+  animation: gradientShift 2.8s ease-in-out infinite, socialPulse 2.3s ease-in-out infinite;
+  border: 2px solid rgba(255, 107, 157, 0.6);
+  color: #000 !important;
+  font-weight: bold !important;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.9) !important;
+}
+
+.social-icon-animated-1 { /* LinkedIn */
+  background: linear-gradient(45deg, #c471ed, #ffd93d, #00ffe1);
+  background-size: 300% 300%;
+  animation: gradientShift 3.1s ease-in-out infinite, socialPulse 2.6s ease-in-out infinite;
+  border: 2px solid rgba(196, 113, 237, 0.6);
+  color: #000 !important;
+  font-weight: bold !important;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.9) !important;
+}
+
+.social-icon-animated-2 { /* FreeCodeCamp */
+  background: linear-gradient(45deg, #00ffe1, #c471ed, #ff6b9d);
+  background-size: 300% 300%;
+  animation: gradientShift 2.5s ease-in-out infinite, socialPulse 2.9s ease-in-out infinite;
+  border: 2px solid rgba(0, 255, 225, 0.6);
+  color: #000 !important;
+  font-weight: bold !important;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.9) !important;
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes socialPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 15px rgba(255, 107, 157, 0.3);
+  }
+  50% {
+    transform: scale(1.08);
+    box-shadow: 0 0 25px rgba(255, 107, 157, 0.6);
+  }
 }

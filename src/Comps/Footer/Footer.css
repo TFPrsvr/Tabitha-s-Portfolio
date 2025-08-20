@@ -9,7 +9,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 1001;
   font-size: var(--font-size-base);
   padding: 0 var(--space-8);
   box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
@@ -21,7 +21,8 @@
   justify-content: space-between;
   width: 100%;
   max-width: 1200px;
-  padding: 0 var(--space-8);
+  padding: 0 var(--space-12);
+  gap: var(--space-12);
 }
 
 .resume-actions-footer {
@@ -30,21 +31,57 @@
   gap: var(--space-6);
 }
 
+.resume-actions-footer .resume-icon {
+  margin-left: var(--space-4);
+}
+
 .resume-label {
   color: var(--color-text-secondary);
-  font-weight: var(--font-weight-medium);
-  font-size: var(--font-size-sm);
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1.1rem;
+  background: linear-gradient(45deg, #ff6b9d, #c471ed, #12c2e9);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 3s ease-in-out infinite, pulse 2s ease-in-out infinite;
+  text-shadow: 0 0 20px rgba(255, 107, 157, 0.5);
+  letter-spacing: 0.5px;
 }
 
 .resume-icon {
   color: var(--color-primary);
-  font-size: var(--font-size-2xl);
-  padding: var(--space-2);
+  font-size: 2.2rem;
+  padding: var(--space-4);
   border-radius: var(--radius-md);
   transition: all var(--transition-normal);
   text-decoration: none;
   background: rgba(0, 184, 169, 0.1);
   border: 1px solid rgba(0, 184, 169, 0.3);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  font-weight: 900;
+}
+
+@media (max-width: 480px) {
+  .footer {
+    height: 7vh;
+  }
+  
+  .resume-label {
+    font-size: 0.8rem;
+  }
+  
+  .resume-icon {
+    font-size: 1.8rem !important;
+    width: 35px !important;
+    height: 35px !important;
+    padding: 6px !important;
+  }
 }
 
 .resume-icon:hover {
@@ -62,13 +99,36 @@
 }
 
 @media (max-width: 768px) {
+  .footer {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 1001;
+    height: 8vh;
+    padding: 0 var(--space-4);
+  }
+  
   .footer-content {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     gap: var(--space-2);
+    padding: 0;
   }
   
   .resume-actions-footer {
-    order: -1;
+    order: 0;
+  }
+  
+  .resume-label {
+    font-size: 0.9rem;
+  }
+  
+  .resume-icon {
+    font-size: 2.0rem !important;
+    width: 40px !important;
+    height: 40px !important;
+    padding: 8px !important;
   }
 }
 
@@ -88,4 +148,56 @@ footer a, footer span {
 
 footer a:hover {
   color: var(--color-primary);
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+  }
+}
+
+/* Animated footer icons */
+.icon-animated-0 { /* View icon */
+  background: linear-gradient(45deg, #00ffe1, #ff6b9d, #c471ed) !important;
+  background-size: 300% 300% !important;
+  animation: gradientShift 3s ease-in-out infinite, iconPulse 2.5s ease-in-out infinite !important;
+  border: 2px solid rgba(0, 255, 225, 0.6) !important;
+  color: #000 !important;
+  font-weight: bold !important;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8) !important;
+}
+
+.icon-animated-1 { /* Download icon */
+  background: linear-gradient(45deg, #ffd93d, #00ffe1, #c471ed) !important;
+  background-size: 300% 300% !important;
+  animation: gradientShift 3.2s ease-in-out infinite, iconPulse 2.1s ease-in-out infinite !important;
+  border: 2px solid rgba(255, 217, 61, 0.6) !important;
+  color: #000 !important;
+  font-weight: bold !important;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8) !important;
+}
+
+@keyframes iconPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 15px rgba(255, 107, 157, 0.3);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(255, 107, 157, 0.6);
+  }
 }
