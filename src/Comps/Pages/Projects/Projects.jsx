@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import './Projects.css';
-import { ShimmerButton } from '../../../components/magicui/shimmer-button';
-import { TypingAnimation } from '../../../components/magicui/typing-animation';
 import HeaderImg from '../../Assets/imgsVids/projects/NotesApp/HeaderTitleContentNotesApp.png'
 import LoginOutlined from '../../Assets/imgsVids/projects/NotesApp/NotesAppLoginOutlined.png'
 import LoginNImg from '../../Assets/imgsVids/projects/NotesApp/loginNotesApp.png'
@@ -125,14 +123,7 @@ const Projects = () => {
 
   return (
     <section id='projects' className='projects-section'>
-      <TypingAnimation
-        className='section-title text-3xl font-bold mb-8'
-        duration={70}
-        delay={200}
-        startOnView={true}
-      >
-        My Projects
-      </TypingAnimation>
+      <h1 className='section-title'>My Projects</h1>
       
       <div className='projects-grid'>
         {projects.map((project, index) => (
@@ -143,37 +134,28 @@ const Projects = () => {
                 {!project.isPlaceholder ? (
                   <>
                     {project.isRPA ? (
-                      <ShimmerButton
+                      <button 
                         onClick={() => window.open(project.liveUrl, '_blank')}
-                        shimmerColor="#00ff88"
-                        background="linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
-                        borderRadius="8px"
-                        className="text-white font-medium px-4 py-2"
+                        className='live-link'
                       >
                         🚀 Try Live Demo
-                      </ShimmerButton>
+                      </button>
                     ) : (
-                      <ShimmerButton
-                        onClick={() => openLightbox(project.images, 0)}
+                      <button 
+                        onClick={() => openLightbox(project.images, 0)} 
+                        className='live-link'
                         disabled={project.images.length === 0}
-                        shimmerColor="#ffffff"
-                        background="linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%)"
-                        borderRadius="8px"
-                        className="text-white font-medium px-4 py-2"
                       >
                         View Gallery
-                      </ShimmerButton>
+                      </button>
                     )}
-                    <ShimmerButton
+                    <button
                       onClick={project.githubUrl !== '#' ? () => window.open(project.githubUrl, '_blank') : undefined}
                       disabled={project.githubUrl === '#'}
-                      shimmerColor={project.githubUrl !== '#' ? "#ff6b6b" : "#666666"}
-                      background={project.githubUrl !== '#' ? "linear-gradient(135deg, #1f2937 0%, #374151 100%)" : "linear-gradient(135deg, #444444 0%, #555555 100%)"}
-                      borderRadius="8px"
-                      className={`text-white font-medium px-4 py-2 ml-2 ${project.githubUrl === '#' ? 'disabled-github' : ''}`}
+                      className={`github-link ${project.githubUrl === '#' ? 'disabled' : ''}`}
                     >
                       {project.githubUrl !== '#' ? 'GitHub' : 'No GitHub'}
-                    </ShimmerButton>
+                    </button>
                   </>
                 ) : (
                   <div className='placeholder-links'>
@@ -280,16 +262,13 @@ const Projects = () => {
                 <div className='project-links'>
                   {!project.isPlaceholder ? (
                     <>
-                      <ShimmerButton
-                        onClick={() => openLightbox(project.images, 0)}
+                      <button 
+                        onClick={() => openLightbox(project.images, 0)} 
+                        className='live-link'
                         disabled={project.images.length === 0}
-                        shimmerColor="#ffffff"
-                        background="linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%)"
-                        borderRadius="8px"
-                        className="text-white font-medium px-4 py-2"
                       >
                         View Gallery
-                      </ShimmerButton>
+                      </button>
                       <div className='placeholder-links'>
                         <span className='coming-soon'>Proprietary - Banyan Labs</span>
                       </div>
