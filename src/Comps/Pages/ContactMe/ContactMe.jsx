@@ -66,7 +66,8 @@ This inquiry was submitted through your portfolio contact form.`;
       <div className='contact-content'>
         <div className='contact-info'>
           <p className='contact-description'>
-            Ready to Collaborate? General Inquiries?
+            Ready to Collaborate?<br />
+            General Inquiries?
           </p>
           
           <div className='contact-details' role="region" aria-label="Contact Information">

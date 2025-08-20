@@ -52,8 +52,8 @@
 
 .resume-icon {
   color: var(--color-primary);
-  font-size: 2.2rem;
-  padding: var(--space-4);
+  font-size: 2.8rem;
+  padding: var(--space-2);
   border-radius: var(--radius-md);
   transition: all var(--transition-normal);
   text-decoration: none;
@@ -62,8 +62,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 52px;
-  height: 52px;
+  width: 58px;
+  height: 58px;
   font-weight: 900;
 }
 
@@ -77,10 +77,10 @@
   }
   
   .resume-icon {
-    font-size: 1.8rem !important;
-    width: 35px !important;
-    height: 35px !important;
-    padding: 6px !important;
+    font-size: 2.2rem !important;
+    width: 42px !important;
+    height: 42px !important;
+    padding: 4px !important;
   }
 }
 
