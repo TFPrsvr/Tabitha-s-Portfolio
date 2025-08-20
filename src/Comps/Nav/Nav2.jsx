@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Nav.css'
 
-const sections = ['about', 'skills', 'projects', 'resume', 'contact'];
+const sections = ['about', 'skills', 'projects', 'contact'];
 
 const Nav2 = () => {
   const [open, setOpen] = useState(false);
