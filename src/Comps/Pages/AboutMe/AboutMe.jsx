@@ -39,13 +39,11 @@ const AboutMe = () => {
 
 
       <h1>Hi, I'm Tabitha!</h1>
-      <p>I’m a Full Stack Web Developer with a passion for building clean, functional, and user-focused digital experiences. My journey into tech wasn’t traditional, but it’s shaped who I am as a developer and as a person.</p>
+      <p>I'm a Full Stack Web Developer passionate about building clean, functional, and user-focused digital experiences. My journey began through the Persevere coding program, where I discovered my love for problem-solving and creating solutions from the ground up.</p>
       <br />
-      <p>I first heard about the Persevere coding program through my probation officer. Although I was already off probation by the time I started, I knew it was a second chance I couldn’t pass up. The road wasn’t easy — I was shuffled between instructors and, at times, unsure if I would make it through. But everything changed when I was placed with a teacher who genuinely cared, and I found support in my fellow class developers. With their help and my determination, I not only completed the program — I thrived.</p>
+      <p>After graduating, I was offered an internship that launched my professional development journey. I'm excited to continue growing my skills and exploring new technologies across frontend frameworks, backend systems, and databases.</p>
       <br />
-       <p>After graduating from the Full Stack Web Development course, I was offered an internship with a company that saw my potential. I'm excited about starting this journey and the incredible opportunity to grow, sharpen my skills, creating the valuable conections with the wonderful network of Dev's, and keep doing what I love: solving problems, building things from the ground up, and learning every single day.</p>
-       <br />
-      <p>I’m driven by a desire to create meaningful tools and applications — and by the belief that your past doesn't shape your future.</p>
+      <p>I'm driven by the endless possibilities of what applications can achieve and the belief that your past doesn't define your future.</p>
       </div>
       </div>
     </section>

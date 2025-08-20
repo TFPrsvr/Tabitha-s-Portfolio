@@ -20,7 +20,7 @@ const ContactMe = () => {
     e.preventDefault();
     // Create mailto link with form data
     const emailBody = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
-    const mailtoLink = `mailto:tabithafortbrown@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(emailBody)}`;
+    const mailtoLink = `mailto:tfortner.prsvr@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(emailBody)}`;
     window.location.href = mailtoLink;
   };
 
@@ -38,7 +38,7 @@ const ContactMe = () => {
           
           <div className='contact-details'>
             <div className='contact-item'>
-              <strong>Email:</strong> <a href="mailto:tabithafortbrown@gmail.com">tabithafortbrown@gmail.com</a>
+              <strong>Email:</strong> <a href="mailto:tfortner.prsvr@gmail.com">tfortner.prsvr@gmail.com</a>
             </div>
             <div className='contact-item'>
               <strong>Location:</strong> Remote / Open to Relocation
