@@ -5,7 +5,7 @@ import { TypingAnimation } from '../../../components/magicui/typing-animation';
 import HeaderImg from '../../Assets/imgsVids/projects/NotesApp/HeaderTitleContentNotesApp.png'
 import LoginOutlined from '../../Assets/imgsVids/projects/NotesApp/NotesAppLoginOutlined.png'
 import LoginNImg from '../../Assets/imgsVids/projects/NotesApp/loginNotesApp.png'
-import Map from '../../Assets/imgsVids/projects/NotesApp/MapNotesApp.png'
+import Map from '../../Assets/imgsVids/projects/NotesApp/mapofNotesOrNoNotesNotesApp.png'
 import LROption from '../../Assets/imgsVids/projects/NotesApp/NotesAppLRoption.png'
 import Register from '../../Assets/imgsVids/projects/NotesApp/RegisterNoteApp.png'
 import IdeaSuggest from '../../Assets/imgsVids/projects/Whitneys/IdeasSuggestWhits.png'
