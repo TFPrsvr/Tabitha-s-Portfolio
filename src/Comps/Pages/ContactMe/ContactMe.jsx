@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './ContactMe.css';
+import { ShimmerButton } from '../../../components/magicui/shimmer-button';
 
 const ContactMe = () => {
   const [formData, setFormData] = useState({
@@ -95,9 +96,15 @@ const ContactMe = () => {
             ></textarea>
           </div>
 
-          <button type="submit" className='submit-btn'>
+          <ShimmerButton
+            type="submit"
+            shimmerColor="#ff6b9d"
+            background="linear-gradient(135deg, #c471ed 0%, #ff6b9d 100%)"
+            borderRadius="10px"
+            className="text-white font-black px-8 py-3 w-auto contact-submit-btn"
+          >
             Send Message
-          </button>
+          </ShimmerButton>
         </form>
 
         <p className='resume-note'>
