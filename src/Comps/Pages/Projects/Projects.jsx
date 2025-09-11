@@ -76,6 +76,22 @@ const Projects = () => {
       githubUrl: '#',
       isPlaceholder: false,
       isRPA: true
+    },
+    // Automotive Database
+    {
+      name: 'The Pickard Automotive Database',
+      description: 'A comprehensive automotive database application featuring vehicle lookup, management system, and automotive data organization. Built for automotive enthusiasts and professionals to manage and explore vehicle information.',
+      techStack: {
+        frontend: ['React', 'JavaScript', 'CSS3', 'HTML5'],
+        backend: ['Node.js', 'Express.js'],
+        database: ['MongoDB'],
+        tools: ['Git', 'GitHub', 'Vercel', 'VS Code']
+      },
+      images: [],
+      liveUrl: 'https://the-pickard.vercel.app/',
+      githubUrl: '#',
+      isPlaceholder: false,
+      isAutomotive: true
     }
   ];
 
@@ -91,7 +107,7 @@ const Projects = () => {
         tools: ['Git', 'GitHub', 'Docker', 'Stripe']
       },
       images: [WidgetImg1, WidgetImg2, WidgetImg3, WidgetImg4],
-      liveUrl: '#',
+      liveUrl: 'https://donation-widget-beta.vercel.app/',
       githubUrl: '#',
       isPlaceholder: false
     },
@@ -106,7 +122,7 @@ const Projects = () => {
         tools: ['Git', 'GitHub', 'Docker', 'Stripe Connect', 'Clerk Auth']
       },
       images: [DashboardImg1, DashboardImg2, DashboardImg3, DashboardImg4],
-      liveUrl: '#',
+      liveUrl: 'https://passiton-dashboard.vercel.app/',
       githubUrl: '#',
       isPlaceholder: false
     }
@@ -142,7 +158,7 @@ const Projects = () => {
               <div className='project-links'>
                 {!project.isPlaceholder ? (
                   <>
-                    {project.isRPA ? (
+                    {project.isRPA || project.isAutomotive ? (
                       <ShimmerButton
                         onClick={() => window.open(project.liveUrl, '_blank')}
                         shimmerColor="#00ff88"
@@ -150,7 +166,7 @@ const Projects = () => {
                         borderRadius="8px"
                         className="text-white font-medium px-4 py-2"
                       >
-                        🚀 Try Live Demo
+                        {project.isAutomotive ? '🚗 View Live Site' : '🚀 Try Live Demo'}
                       </ShimmerButton>
                     ) : (
                       <ShimmerButton
@@ -281,12 +297,21 @@ const Projects = () => {
                   {!project.isPlaceholder ? (
                     <>
                       <ShimmerButton
+                        onClick={() => window.open(project.liveUrl, '_blank')}
+                        shimmerColor="#00ff88"
+                        background="linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
+                        borderRadius="8px"
+                        className="text-white font-medium px-4 py-2"
+                      >
+                        🚀 Live Site
+                      </ShimmerButton>
+                      <ShimmerButton
                         onClick={() => openLightbox(project.images, 0)}
                         disabled={project.images.length === 0}
                         shimmerColor="#ffffff"
                         background="linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%)"
                         borderRadius="8px"
-                        className="text-white font-medium px-4 py-2"
+                        className="text-white font-medium px-4 py-2 ml-2"
                       >
                         View Gallery
                       </ShimmerButton>
@@ -296,7 +321,7 @@ const Projects = () => {
                     </>
                   ) : (
                     <div className='placeholder-links'>
-                      <span className='coming-soon'>Proprietary - Banyan Labs</span>
+                      <span className='coming-soon'>Coming Soon</span>
                     </div>
                   )}
                 </div>

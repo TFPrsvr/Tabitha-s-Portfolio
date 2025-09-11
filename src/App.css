@@ -136,6 +136,8 @@ section {
   box-sizing: border-box;
   padding-bottom: var(--space-16);
   min-height: calc(100vh - 15vh);
+  position: relative;
+  z-index: 1;
 }
 
 /* Typography Hierarchy */

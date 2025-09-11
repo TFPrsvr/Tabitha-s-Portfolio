@@ -201,7 +201,7 @@
     width: 30vw;
     height: 70vh;
     transition: left var(--transition-normal);
-    z-index: 999;
+    z-index: 1001;
     border-radius: 0 var(--radius-xl) var(--radius-xl) 0;
     gap: var(--space-6);
     /* Better touch scrolling */
@@ -277,7 +277,7 @@
     width: 85vw;
     height: 100vh;
     transition: left var(--transition-normal);
-    z-index: 999;
+    z-index: 1001;
     gap: var(--space-8);
     /* Better touch scrolling */
     overflow-y: auto;
