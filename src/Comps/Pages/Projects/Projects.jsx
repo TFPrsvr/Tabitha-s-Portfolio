@@ -59,7 +59,7 @@ const Projects = () => {
       },
       images: [Register, LoginOutlined, LoginNImg, HeaderImg, Map, LROption],
       liveUrl: '#',
-      githubUrl: '#'
+      githubUrl: 'https://github.com/TFPrsvr/final4-NotesApp'
     },
     // Custom RPA Platform
     {
@@ -73,7 +73,7 @@ const Projects = () => {
       },
       images: [],
       liveUrl: 'http://localhost:3001',
-      githubUrl: '#',
+      githubUrl: 'https://github.com/TFPrsvr/RPA-Platform',
       isPlaceholder: false,
       isRPA: true
     },
@@ -104,7 +104,7 @@ const Projects = () => {
         tools: ['Clerk Auth', 'Stripe', 'SendGrid', 'Docker', 'Git']
       },
       images: [],
-      liveUrl: '#',
+      liveUrl: 'https://t-g-s-tires.vercel.app',
       githubUrl: 'https://github.com/TFPrsvr/T.G.-s-Tires-',
       isPlaceholder: false,
       isTireMarketplace: true
@@ -120,7 +120,7 @@ const Projects = () => {
         tools: ['Clerk Auth', 'Capacitor', 'FFmpeg', 'Vercel', 'Docker', 'Jest']
       },
       images: [],
-      liveUrl: '#',
+      liveUrl: 'https://anc-audio-app.vercel.app',
       githubUrl: 'https://github.com/TFPrsvr/Tabbs-ANC-App',
       isPlaceholder: false,
       isAudioApp: true
