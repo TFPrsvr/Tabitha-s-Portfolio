@@ -80,18 +80,50 @@ const Projects = () => {
     // Automotive Database
     {
       name: 'The Pickard Automotive Database',
-      description: 'A comprehensive automotive database application featuring vehicle lookup, management system, and automotive data organization. Built for automotive enthusiasts and professionals to manage and explore vehicle information.',
+      description: 'A comprehensive automotive mechanics database featuring parts lookup, diagnostic procedures, repair guides, and automotive data management. Built for automotive professionals and enthusiasts with user authentication, professional verification, and content moderation.',
       techStack: {
-        frontend: ['React', 'JavaScript', 'CSS3', 'HTML5'],
-        backend: ['Node.js', 'Express.js'],
-        database: ['MongoDB'],
-        tools: ['Git', 'GitHub', 'Vercel', 'VS Code']
+        frontend: ['Next.js', 'React', 'TypeScript', 'TailwindCSS'],
+        backend: ['Next.js API Routes', 'Drizzle ORM'],
+        database: ['Neon PostgreSQL'],
+        tools: ['Clerk Auth', 'Git', 'GitHub', 'Vercel', 'VS Code']
       },
       images: [],
       liveUrl: 'https://the-pickard.vercel.app/',
-      githubUrl: '#',
+      githubUrl: 'https://github.com/TFPrsvr/The-Pickard',
       isPlaceholder: false,
       isAutomotive: true
+    },
+    // Tire Marketplace
+    {
+      name: 'TGS Tires Marketplace',
+      description: 'A full-stack e-commerce platform for tire sales featuring Stripe payment processing, user authentication, inventory management, and order tracking. Built with modern Next.js architecture including multi-tenant functionality, email notifications, and comprehensive admin dashboard.',
+      techStack: {
+        frontend: ['Next.js', 'React', 'TypeScript', 'TailwindCSS'],
+        backend: ['Next.js API Routes', 'Prisma ORM', 'Stripe Webhooks'],
+        database: ['Supabase PostgreSQL'],
+        tools: ['Clerk Auth', 'Stripe', 'SendGrid', 'Docker', 'Git']
+      },
+      images: [],
+      liveUrl: '#',
+      githubUrl: 'https://github.com/TFPrsvr/T.G.-s-Tires-',
+      isPlaceholder: false,
+      isTireMarketplace: true
+    },
+    // ANC Audio App
+    {
+      name: 'Professional Audio Processing Suite',
+      description: 'A comprehensive browser-based audio production application featuring AI-powered analysis, professional-grade effects (EQ, compression, reverb), advanced audio testing suite with 13 validation types, and real-time spectral analysis. Includes mobile deployment via Capacitor for Android/iOS.',
+      techStack: {
+        frontend: ['Next.js', 'React', 'TypeScript', 'TailwindCSS', 'Web Audio API'],
+        backend: ['Next.js API Routes', 'Custom DSP Algorithms'],
+        database: ['Neon PostgreSQL', 'IndexedDB'],
+        tools: ['Clerk Auth', 'Capacitor', 'FFmpeg', 'Vercel', 'Docker', 'Jest']
+      },
+      images: [],
+      liveUrl: '#',
+      githubUrl: 'https://github.com/TFPrsvr/Tabbs-ANC-App',
+      isPlaceholder: false,
+      isAudioApp: true
     }
   ];
 
@@ -158,15 +190,19 @@ const Projects = () => {
               <div className='project-links'>
                 {!project.isPlaceholder ? (
                   <>
-                    {project.isRPA || project.isAutomotive ? (
+                    {project.isRPA || project.isAutomotive || project.isTireMarketplace || project.isAudioApp ? (
                       <ShimmerButton
                         onClick={() => window.open(project.liveUrl, '_blank')}
                         shimmerColor="#00ff88"
                         background="linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
                         borderRadius="8px"
                         className="text-white font-medium px-4 py-2"
+                        disabled={project.liveUrl === '#'}
                       >
-                        {project.isAutomotive ? '🚗 View Live Site' : '🚀 Try Live Demo'}
+                        {project.isAutomotive ? '🚗 View Live Site' :
+                         project.isRPA ? '🚀 Try Live Demo' :
+                         project.isTireMarketplace ? '🛒 E-Commerce Platform' :
+                         project.isAudioApp ? '🎵 Audio App' : '🚀 View Demo'}
                       </ShimmerButton>
                     ) : (
                       <ShimmerButton
