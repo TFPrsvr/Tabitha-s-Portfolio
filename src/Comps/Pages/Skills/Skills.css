@@ -38,11 +38,9 @@
 
 .skills-track {
   display: flex;
-  gap: var(--space-8);
-  animation-duration: 20s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  width: fit-content;
+  gap: 2rem;
+  animation: scroll 12s linear infinite;
+  width: max-content;
 }
 
 /* Scroll directions */
