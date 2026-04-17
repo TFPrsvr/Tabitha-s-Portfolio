@@ -261,7 +261,7 @@
 
 .contact-submit-wrapper {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .contact-submit-btn {

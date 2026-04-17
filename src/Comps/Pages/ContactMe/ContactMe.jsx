@@ -80,22 +80,21 @@ This inquiry was submitted through your portfolio contact form.`;
             Ready to Collaborate?<br />
             General Inquiries?
           </p>
-
-          <div className='contact-details' role="region" aria-label="Contact Information">
-            <div className='contact-item'>
-              <strong>Email:</strong> <a href="mailto:tfortner.prsvr@gmail.com" aria-label="Send email to tfortner.prsvr@gmail.com">tfortner.prsvr@gmail.com</a>
-            </div>
-            <div className='contact-item'>
-              <strong>Phone:</strong> <a href="tel:7319313843" aria-label="Call 731-931-3843">731-931-3843</a>
-            </div>
-            <div className='contact-item'>
-              <strong>Location:</strong> <span aria-label="Work location is remote">Remote</span>
-            </div>
-          </div>
         </div>
       </div>
 
       <div className='contact-content'>
+        <div className='contact-details' role="region" aria-label="Contact Information">
+          <div className='contact-item'>
+            <strong>Email:</strong> <a href="mailto:tfortner.prsvr@gmail.com" aria-label="Send email to tfortner.prsvr@gmail.com">tfortner.prsvr@gmail.com</a>
+          </div>
+          <div className='contact-item'>
+            <strong>Phone:</strong> <a href="tel:7319313843" aria-label="Call 731-931-3843">731-931-3843</a>
+          </div>
+          <div className='contact-item'>
+            <strong>Location:</strong> <span aria-label="Work location is remote">Remote</span>
+          </div>
+        </div>
         <form className='contact-form' onSubmit={handleSubmit} role="form" aria-label="Contact Form">
           <div className='form-group'>
             <label htmlFor="name">Name *</label>
