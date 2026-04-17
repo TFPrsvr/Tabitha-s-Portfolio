@@ -11,11 +11,23 @@
   gap: 2rem;
 }
 
+/* Side-by-side row: Contact Tabitha / With Your Ideas + Ready to Collaborate */
+.contact-top-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  width: 100%;
+  max-width: 1000px;
+}
+
 .contact-header {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
+  flex: 1;
 }
 
 .contact-title {
@@ -72,8 +84,8 @@
 .contact-info {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  max-width: 600px;
+  gap: 1rem;
+  flex: 1;
   text-align: center;
   align-items: center;
 }
@@ -247,31 +259,20 @@
   min-height: 120px;
 }
 
-.submit-btn {
-  padding: 1rem 2rem;
-  background: linear-gradient(45deg, #00ffe1, #ffb3ec);
-  border: none;
-  border-radius: 8px;
-  color: #000;
-  font-size: 1.1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.contact-submit-wrapper {
+  display: flex;
+  justify-content: flex-start;
 }
 
-.submit-btn:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 15px 30px rgba(0, 255, 225, 0.4);
-  animation: buttonPulse 1.5s infinite;
+.contact-submit-btn {
+  font-size: 0.8rem !important;
+  padding: 6px 14px !important;
+  min-height: 32px !important;
+  width: auto !important;
 }
 
-@keyframes buttonPulse {
-  0%, 100% {
-    box-shadow: 0 15px 30px rgba(0, 255, 225, 0.4);
-  }
-  50% {
-    box-shadow: 0 20px 40px rgba(0, 255, 225, 0.6);
-  }
+.contact-submit-btn span {
+  font-size: 0.9rem !important;
 }
 
 /* Keyframe animations for glowing effects */
@@ -324,30 +325,26 @@
   .contact-section {
     padding: 1rem;
   }
-  
+
+  .contact-top-row {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
   .contact-title {
     font-size: 2rem;
   }
-  
+
   .contact-subtitle {
     font-size: 1.2rem;
   }
-  
+
   .contact-form {
     padding: 1.5rem;
   }
-  
+
   .contact-details {
     text-align: center;
-  }
-  
-  .contact-submit-btn {
-    font-size: 1.2rem !important;
-    padding: 0.75rem 2rem !important;
-  }
-  
-  .contact-submit-btn span {
-    font-size: 1.8rem !important;
   }
 }
 
@@ -355,22 +352,13 @@
   .contact-title {
     font-size: 1.5rem;
   }
-  
+
   .contact-subtitle {
     font-size: 1rem;
   }
-  
+
   .contact-form {
     padding: 1rem;
-  }
-  
-  .contact-submit-btn {
-    font-size: 1rem !important;
-    padding: 0.5rem 1.5rem !important;
-  }
-  
-  .contact-submit-btn span {
-    font-size: 1.5rem !important;
   }
 }
 

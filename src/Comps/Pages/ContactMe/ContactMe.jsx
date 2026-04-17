@@ -21,7 +21,6 @@ const ContactMe = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Create professional mailto link with form data
     const emailBody = `Dear Tabitha,
 
 I hope this message finds you well. I obtained your contact information from your professional portfolio website.
@@ -53,34 +52,35 @@ This inquiry was submitted through your portfolio contact form.`;
 
   return (
     <section id='contact' className='contact-section' role="main" aria-labelledby="contact-heading">
-      <div className='contact-header'>
-        <h1 id="contact-heading" className='contact-title' aria-label="Contact Tabitha">
-          <InteractiveHoverButton className="contact-word-0 text-white border-white/30 hover:border-white/60">
-            Contact
-          </InteractiveHoverButton>
-          <InteractiveHoverButton className="contact-word-1 text-white border-white/30 hover:border-white/60">
-            Tabitha
-          </InteractiveHoverButton>
-        </h1>
-        <p className='contact-subtitle' aria-label="With Your Ideas">
-          <InteractiveHoverButton className="contact-word-2 text-white border-white/30 hover:border-white/60">
-            With
-          </InteractiveHoverButton>
-          <InteractiveHoverButton className="contact-word-3 text-white border-white/30 hover:border-white/60">
-            Your
-          </InteractiveHoverButton>
-          <InteractiveHoverButton className="contact-word-4 text-white border-white/30 hover:border-white/60">
-            Ideas
-          </InteractiveHoverButton>
-        </p>
-      </div>
-      <div className='contact-content'>
+      <div className='contact-top-row'>
+        <div className='contact-header'>
+          <h1 id="contact-heading" className='contact-title' aria-label="Contact Tabitha">
+            <InteractiveHoverButton className="contact-word-0 text-white border-white/30 hover:border-white/60">
+              Contact
+            </InteractiveHoverButton>
+            <InteractiveHoverButton className="contact-word-1 text-white border-white/30 hover:border-white/60">
+              Tabitha
+            </InteractiveHoverButton>
+          </h1>
+          <p className='contact-subtitle' aria-label="With Your Ideas">
+            <InteractiveHoverButton className="contact-word-2 text-white border-white/30 hover:border-white/60">
+              With
+            </InteractiveHoverButton>
+            <InteractiveHoverButton className="contact-word-3 text-white border-white/30 hover:border-white/60">
+              Your
+            </InteractiveHoverButton>
+            <InteractiveHoverButton className="contact-word-4 text-white border-white/30 hover:border-white/60">
+              Ideas
+            </InteractiveHoverButton>
+          </p>
+        </div>
+
         <div className='contact-info'>
           <p className='contact-description'>
             Ready to Collaborate?<br />
             General Inquiries?
           </p>
-          
+
           <div className='contact-details' role="region" aria-label="Contact Information">
             <div className='contact-item'>
               <strong>Email:</strong> <a href="mailto:tfortner.prsvr@gmail.com" aria-label="Send email to tfortner.prsvr@gmail.com">tfortner.prsvr@gmail.com</a>
@@ -93,7 +93,9 @@ This inquiry was submitted through your portfolio contact form.`;
             </div>
           </div>
         </div>
+      </div>
 
+      <div className='contact-content'>
         <form className='contact-form' onSubmit={handleSubmit} role="form" aria-label="Contact Form">
           <div className='form-group'>
             <label htmlFor="name">Name *</label>
@@ -175,25 +177,19 @@ This inquiry was submitted through your portfolio contact form.`;
             <small id="message-help" className="sr-only">Provide comprehensive details about your project requirements</small>
           </div>
 
-          <ShimmerButton
-            type="submit"
-            shimmerColor="#ff6b9d"
-            background="linear-gradient(135deg, #c471ed 0%, #ff6b9d 100%)"
-            borderRadius="10px"
-            className="text-white font-black px-8 py-3 w-auto contact-submit-btn"
-            style={{ 
-              fontWeight: 900,
-              background: "linear-gradient(135deg, #c471ed 0%, #ff6b9d 100%)",
-              border: "none",
-              fontSize: '1.5rem',
-              lineHeight: '1',
-              margin: '0'
-            }}
-            aria-describedby="submit-help"
-          >
-            <span style={{ marginTop: '0', marginBottom: '0' }}>Send Message</span> <span style={{ fontSize: '2.25rem', lineHeight: '1', padding: '0', margin: '0', marginTop: '0', marginBottom: '0', verticalAlign: 'middle' }}>📧</span>
-          </ShimmerButton>
-          <small id="submit-help" className="sr-only">Submit the contact form to send your inquiry via email</small>
+          <div className='contact-submit-wrapper'>
+            <ShimmerButton
+              type="submit"
+              shimmerColor="#ff6b9d"
+              background="linear-gradient(135deg, #c471ed 0%, #ff6b9d 100%)"
+              borderRadius="10px"
+              className="text-white font-semibold contact-submit-btn"
+              aria-describedby="submit-help"
+            >
+              Send Message <span aria-hidden="true">📧</span>
+            </ShimmerButton>
+            <small id="submit-help" className="sr-only">Submit the contact form to send your inquiry via email</small>
+          </div>
         </form>
 
         <p className='resume-note'>
