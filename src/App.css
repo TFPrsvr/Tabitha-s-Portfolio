@@ -118,7 +118,7 @@ section {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: var(--space-8) var(--space-4);
+  padding: 0 var(--space-4);
   box-sizing: border-box;
   background: transparent;
 }
@@ -134,8 +134,9 @@ section {
   width: 100%;
   overflow-x: hidden;
   box-sizing: border-box;
+  padding-top: 80px;
   padding-bottom: var(--space-16);
-  min-height: calc(100vh - 15vh);
+  min-height: calc(100vh - 80px);
   position: relative;
   z-index: 1;
 }
