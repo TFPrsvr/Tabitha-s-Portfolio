@@ -44,22 +44,24 @@ const AboutMe = () => {
         <div className="about-text">
           <h1>Hi, I'm Tabitha!</h1>
           <p>
-            I'm a Full Stack Web Developer passionate about building clean,
-            functional, and user-focused digital experiences. My journey began
-            through the Persevere coding program, where I discovered my love for
-            problem-solving and creating solutions from the ground up.
+            I am a Full-Stack Web Developer specialized in building secure, scalable, and
+            user-centric digital experiences. My technical foundation was forged through the
+            Persevere coding program and refined during a high-impact Professional Development
+            residency at Banyan Labs, where I worked within an Agile/Scrum environment to ship
+            proprietary SaaS products.
           </p>
           <br />
           <p>
-            After graduating, I was offered an internship that launched my
-            professional development journey. I'm excited to continue growing my
-            skills and exploring new technologies across frontend frameworks,
-            backend systems, and databases.
+            I have a proven track record of architecting complex financial pipelines (Stripe),
+            engineering multi-tenant dashboards, and developing data-rich features like exportable
+            CRMs and role-based access systems. I approach code with a methodical,
+            systems-thinking mindset — believing that clean logic and persistent problem-solving
+            can solve any challenge.
           </p>
           <br />
           <p>
-            I'm driven by the endless possibilities of what applications can
-            achieve and the belief that your past doesn't define your future.
+            I am driven by the belief that your past doesn&apos;t define your future; it&apos;s the
+            work you do today that builds the path forward.
           </p>
         </div>
       </div>

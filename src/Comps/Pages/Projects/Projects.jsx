@@ -130,8 +130,8 @@ const Projects = () => {
   const banyanLabsProjects = [
     {
       name: 'PassItOn Donation Widget',
-      description: 'An embeddable donation widget that integrates with Stripe for seamless payment processing, checkout pages, and success/cancel pages. Uses Stripe webhooks to handle all payment flows and can be embedded into any website.',
-      contributions: 'Implemented customizable themes, numerous font options with preview examples, dynamic text input for widget headers and placement, toggleable cause/initiative descriptions, recent donors display toggle, progress bar toggle option, recurring monthly and credit card payment button with associated behaviors, anonymous donation option with PCI-compliant secure payment page requiring full name/address while maintaining donor anonymity, success donation page with confetti animation and next payment date display, and multiple styling options.',
+      description: 'An embeddable, multi-tenant donation widget engineered with end-to-end Stripe payment pipelines — managing credit card logic, recurring monthly subscriptions, and anonymous donation options with PCI-compliant security. Deployed via iframe across diverse host platforms.',
+      contributions: 'Financial Engineering: Built an end-to-end payment pipeline using Stripe, managing credit card logic, recurring monthly subscriptions, and anonymous donation options with PCI-compliant security. Responsive UI Architecture: Solved complex iframe stability issues by implementing custom React hooks and ResizeObserver logic for "glitch-free" embedding across diverse host platforms. User Experience: Designed a Live Preview configuration engine and success-state logic featuring custom confetti animations, dynamic billing cycle displays, toggleable cause/initiative descriptions, progress bar, and recent donors display.',
       techStack: {
         frontend: ['Next.js', 'React', 'TypeScript', 'TailwindCSS'],
         backend: ['Next.js API Routes', 'Stripe Webhooks'],
@@ -145,8 +145,8 @@ const Projects = () => {
     },
     {
       name: 'PassItOn Admin Dashboard',
-      description: 'Multi-tenant SaaS dashboard for organizations to create and customize donation widgets. Features editor permissions, SuperAdmin functionality, and comprehensive widget management for multiple websites.',
-      contributions: 'Implemented notifications with toggleable in-app and email options, advanced filters and search functionality, CSV export feature for donations to upload to company CRMs, analytics graphs with customizable time frame filters, team invitation system with active/pending badges and filters, comprehensive user role management including SuperAdmin, Organization Owner, and Editor roles with role-based access control, role management filters on SuperAdmin dashboard, and organization filtering capabilities.',
+      description: 'A comprehensive multi-tenant SaaS dashboard for organizations to manage and deploy customizable donation tools. Engineered with a multi-layered permission system and full data portability for enterprise-grade CRM integration.',
+      contributions: 'Data Portability: Developed an exportable CRM utility allowing users to filter donation data by custom time ranges and generate platform-agnostic CSV files for external integration. Role-Based Access Control (RBAC): Implemented a multi-layered permission system for SuperAdmins, Owners, and Editors, ensuring secure data isolation. System Documentation: Authored comprehensive technical and user documentation, including onboarding guides for future developers and integration manuals for non-technical stakeholders. Also built: analytics graphs with customizable time frame filters, team invitation system with active/pending badges, and in-app/email notification toggles.',
       techStack: {
         frontend: ['Next.js', 'React', 'TypeScript', 'TailwindCSS'],
         backend: ['Next.js API Routes'],
@@ -318,10 +318,11 @@ const Projects = () => {
       <div className='banyan-labs-section'>
         <h2 className='banyan-labs-title'>Professional Development Experience</h2>
         <p className='banyan-labs-description'>
-          Projects completed during OJT with Banyan Labs using Agile/Scrum methodologies including sprint planning and daily standups. 
-          Collaborated with CTO Matthew Wallace, Project Manager Shannon Callins, Coordinator Shandea Hardin, 
-          and development team members Jesse Davis and Tiffany Halsell. Mentored by Senior Developer Rachael Higgins 
-          through continuous feedback sessions.
+          Collaborated in a high-velocity Agile/Scrum team under the mentorship of Senior Developers and the CTO to build
+          and maintain proprietary software during a key growth phase. Recognized by leadership for high-level debugging
+          skills and technical oversight. Worked alongside CTO Matthew Wallace, Project Manager Shannon Callins,
+          Coordinator Shandea Hardin, and developers Jesse Davis and Tiffany Halsell — with continuous mentorship from
+          Senior Developer Rachael Higgins.
         </p>
         
         <div className='projects-grid banyan-projects'>
