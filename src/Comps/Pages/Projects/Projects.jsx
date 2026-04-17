@@ -79,7 +79,7 @@ const Projects = () => {
     },
     // Automotive Database
     {
-      name: 'The Pickard Automotive Database',
+      name: 'The Automotive Database',
       description: 'A comprehensive automotive mechanics database featuring parts lookup, diagnostic procedures, repair guides, and automotive data management. Built for automotive professionals and enthusiasts with user authentication, professional verification, and content moderation.',
       techStack: {
         frontend: ['Next.js', 'React', 'TypeScript', 'TailwindCSS'],
