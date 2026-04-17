@@ -1,5 +1,5 @@
 .projects-section {
-  padding: var(--space-8) var(--space-8);
+  padding: var(--space-4) var(--space-8);
   text-align: center;
   min-height: 100vh;
   background: transparent;
@@ -43,10 +43,9 @@
 
 .project-header {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: var(--space-4);
-  flex-wrap: wrap;
   gap: var(--space-4);
 }
 
@@ -54,6 +53,7 @@
   color: var(--color-accent);
   font-size: var(--font-size-3xl);
   margin: 0;
+  text-align: center;
   text-shadow: 0 0 10px rgba(255, 79, 129, 0.5);
 }
 
