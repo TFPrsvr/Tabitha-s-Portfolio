@@ -1,19 +1,18 @@
 .name-container {
   position: relative;
-  height: 100vh;
+  min-height: calc(100vh - 80px);
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  overflow: hidden;
   z-index: 1;
 }
 
 .intro {
   text-align: center;
   z-index: 2;
-  margin-top: 15vh;
+  margin-top: 0;
   background: rgba(0, 0, 0, 0.7);
   padding: var(--space-12) var(--space-16);
   border-radius: 25px;
@@ -52,7 +51,7 @@
 @media (max-width: 768px) {
   .intro {
     padding: var(--space-8) var(--space-10);
-    margin-top: 10vh;
+    margin-top: 0;
   }
   
   .name-title {
