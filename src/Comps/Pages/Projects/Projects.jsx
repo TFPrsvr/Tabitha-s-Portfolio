@@ -124,6 +124,38 @@ const Projects = () => {
       githubUrl: 'https://github.com/TFPrsvr/Tabbs-ANC-App',
       isPlaceholder: false,
       isAudioApp: true
+    },
+    // HHH Property Maintenance
+    {
+      name: 'HHH Property Maintenance',
+      description: 'Professional business website for a property maintenance company offering excavation, land clearing, bush hogging, flail mowing, dump truck hauling, and demolition services in Dyer County, TN. Features a contact form with email delivery, rate limiting, and input sanitization.',
+      techStack: {
+        frontend: ['Next.js', 'React', 'TypeScript', 'TailwindCSS'],
+        backend: ['Next.js API Routes', 'Resend', 'React Hook Form'],
+        database: ['N/A'],
+        tools: ['Helmet', 'DOMPurify', 'Rate Limiter', 'Vercel', 'Git']
+      },
+      images: [],
+      liveUrl: 'https://hhh-property-maintenance.vercel.app/',
+      githubUrl: 'https://github.com/TFPrsvr/hhh-property-maintenance',
+      isPlaceholder: false,
+      isHHH: true
+    },
+    // Triple L & Son Used Appliances
+    {
+      name: 'Triple L & Son Used Appliances',
+      description: 'Business website and inventory management platform for a used appliances store. The owner can upload and manage new inventory, share listings directly to Facebook, and access a hidden admin panel — all while the public-facing side serves as the full storefront.',
+      techStack: {
+        frontend: ['React', 'JavaScript', 'CSS3'],
+        backend: ['Node.js'],
+        database: ['TBD'],
+        tools: ['Git']
+      },
+      images: [],
+      liveUrl: '#',
+      githubUrl: '#',
+      isPlaceholder: false,
+      isTripleL: true
     }
   ];
 
@@ -190,9 +222,9 @@ const Projects = () => {
               <div className='project-links'>
                 {!project.isPlaceholder ? (
                   <>
-                    {project.isRPA || project.isAutomotive || project.isTireMarketplace || project.isAudioApp ? (
+                    {project.isRPA || project.isAutomotive || project.isTireMarketplace || project.isAudioApp || project.isHHH || project.isTripleL ? (
                       <ShimmerButton
-                        onClick={() => window.open(project.liveUrl, '_blank')}
+                        onClick={() => project.liveUrl !== '#' ? window.open(project.liveUrl, '_blank') : undefined}
                         shimmerColor="#00ff88"
                         background="linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
                         borderRadius="8px"
@@ -202,7 +234,9 @@ const Projects = () => {
                         {project.isAutomotive ? '🚗 View Live Site' :
                          project.isRPA ? '🚀 Try Live Demo' :
                          project.isTireMarketplace ? '🛒 E-Commerce Platform' :
-                         project.isAudioApp ? '🎵 Audio App' : '🚀 View Demo'}
+                         project.isAudioApp ? '🎵 Audio App' :
+                         project.isHHH ? '🏡 View Live Site' :
+                         project.isTripleL ? '🏪 Coming Soon' : '🚀 View Demo'}
                       </ShimmerButton>
                     ) : (
                       <ShimmerButton
