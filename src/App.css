@@ -309,7 +309,7 @@ a:hover {
 /* Enhanced Mobile Styles */
 @media (max-width: 768px) {
   section {
-    padding: var(--space-6) var(--space-4);
+    padding: 0 var(--space-4);
   }
   
   h1 {
@@ -345,7 +345,7 @@ a:hover {
 /* Tablet optimizations */
 @media (min-width: 769px) and (max-width: 1024px) {
   section {
-    padding: var(--space-8) var(--space-6);
+    padding: 0 var(--space-6);
   }
   
   h1 {

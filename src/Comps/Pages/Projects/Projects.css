@@ -286,7 +286,7 @@
 
 @media (max-width: 768px) {
   .projects-section {
-    padding: var(--space-8) var(--space-4);
+    padding: var(--space-4) var(--space-4);
   }
   
   .projects-grid {
