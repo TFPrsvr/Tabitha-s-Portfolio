@@ -144,16 +144,16 @@ const Projects = () => {
     // Triple L & Son Used Appliances
     {
       name: 'Triple L & Son Used Appliances',
-      description: 'Business website and inventory management platform for a used appliances store. The owner can upload and manage new inventory, share listings directly to Facebook, and access a hidden admin panel — all while the public-facing side serves as the full storefront.',
+      description: 'Cross-platform mobile & web app for a used appliances store. The owner can photograph and upload new inventory, share listings directly to Facebook, and manage everything through a hidden admin panel — while the public-facing side serves as the full storefront.',
       techStack: {
-        frontend: ['React', 'JavaScript', 'CSS3'],
-        backend: ['Node.js'],
-        database: ['TBD'],
-        tools: ['Git']
+        frontend: ['React Native', 'Expo', 'TypeScript', 'Expo Router'],
+        backend: ['Supabase', 'Axios'],
+        database: ['Supabase (PostgreSQL)'],
+        tools: ['Expo Camera', 'Expo Image Picker', 'Expo Sharing', 'AsyncStorage', 'Git']
       },
       images: [],
       liveUrl: '#',
-      githubUrl: '#',
+      githubUrl: 'https://github.com/TFPrsvr/triple-lns',
       isPlaceholder: false,
       isTripleL: true
     }
